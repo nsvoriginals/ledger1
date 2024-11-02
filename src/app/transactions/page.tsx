@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import React, { useEffect, useState } from 'react';
@@ -71,7 +69,7 @@ export default function Transaction() {
     try {
       const response = await axios.get(`https://api-devnet.helius.xyz/v0/addresses/${address}/transactions`, {
         params: {
-          'api-key': "b5d22632-cad1-4005-ae59-327d7937274a",
+          'api-key': process.env.NEXT_PUBLIC_HELIUS_API_KEY,
           'limit': 10,
         },
       });
