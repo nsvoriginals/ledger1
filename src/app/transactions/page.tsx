@@ -1,6 +1,6 @@
-// src/app/transactions/page.tsx
 
-"use client"; // Mark this file as a client component
+
+"use client";
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -63,7 +63,7 @@ export default function Transaction() {
   const [transactions, setTransactions] = useState<TransactionData[] | undefined>(undefined);
   const [isLoading, setLoading] = useState<boolean>(false);
   const [isError, setError] = useState<boolean>(false);
-  const router = useRouter(); // Now this can be used since we're in a client component
+  const router = useRouter(); 
 
   const fetchTransactions = async () => {
     setLoading(true);
